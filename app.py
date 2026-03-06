@@ -35,6 +35,10 @@ def custom_header():
 
     return jsonify({"message": "Authentication Failed"}), 401
 
+@app.route('/')
+def home():
+    return "Flask Token Authentication API is running"
+
 
 # Login to generate JWT
 @app.route('/login', methods=['POST'])
